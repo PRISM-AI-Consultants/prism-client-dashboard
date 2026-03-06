@@ -1,0 +1,35 @@
+{
+  "name": "prism-dashboard",
+  "description": "Interactive Streamlit dashboard for tracking PRISM client hours, deliverables, and retainer caps.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "data_file": {
+        "type": "string",
+        "description": "Path to the JSON data store. Defaults to data.json in this directory."
+      }
+    },
+    "required": []
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "ok": { "type": "boolean" },
+      "message": { "type": "string" }
+    }
+  },
+  "run": "streamlit run tools/prism-dashboard/app.py",
+  "tier_caps": {
+    "PRISM Core": 40,
+    "PRISM Scale": 80,
+    "PRISM Activation": 10,
+    "PRISM Momentum Sprint": 60,
+    "Hourly/Session": null
+  },
+  "color_thresholds": {
+    "green": "< 75%",
+    "yellow": "75% - 90%",
+    "red": "> 90%"
+  },
+  "alert_threshold": 0.80
+}

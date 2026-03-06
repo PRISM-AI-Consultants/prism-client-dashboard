@@ -1,0 +1,28 @@
+{
+  "tools": [
+    {
+      "name": "scrape-youtube-data",
+      "description": "Fetches channel and video metadata from YouTube using yt-dlp.",
+      "entry": "tools/scrape-youtube-data/index.py",
+      "schema": "tools/scrape-youtube-data/schema.json"
+    },
+    {
+      "name": "analyze-trends",
+      "description": "Analyzes video performance data and identifies trends.",
+      "entry": "tools/analyze-trends/index.py",
+      "schema": "tools/analyze-trends/schema.json"
+    },
+    {
+      "name": "generate-pdf",
+      "description": "Generates a PDF report from analysis results.",
+      "entry": "tools/generate-pdf/index.py",
+      "schema": "tools/generate-pdf/schema.json"
+    },
+    {
+      "name": "send-email",
+      "description": "Sends an email with an optional file attachment via SMTP.",
+      "entry": "tools/send-email/index.py",
+      "schema": "tools/send-email/schema.json"
+    }
+  ]
+}

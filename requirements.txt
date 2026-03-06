@@ -1,0 +1,5 @@
+yt-dlp
+fpdf2
+python-dotenv
+streamlit
+pandas

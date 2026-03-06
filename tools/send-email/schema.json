@@ -1,0 +1,35 @@
+{
+  "name": "send-email",
+  "description": "Sends an email with an optional file attachment via SMTP.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "to": {
+        "type": "string",
+        "description": "Recipient email address."
+      },
+      "subject": {
+        "type": "string",
+        "description": "Email subject line."
+      },
+      "body": {
+        "type": "string",
+        "description": "Plain-text email body."
+      },
+      "attachment_path": {
+        "type": "string",
+        "description": "Optional path to a file to attach."
+      }
+    },
+    "required": ["to", "subject", "body"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "sent": {
+        "type": "boolean",
+        "description": "Whether the email was sent successfully."
+      }
+    }
+  }
+}

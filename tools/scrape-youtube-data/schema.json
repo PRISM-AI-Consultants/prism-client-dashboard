@@ -1,0 +1,32 @@
+{
+  "name": "scrape-youtube-data",
+  "description": "Fetches channel and video metadata from YouTube using yt-dlp.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "channel_url": {
+        "type": "string",
+        "description": "YouTube channel URL (e.g. https://www.youtube.com/@ChannelName)."
+      },
+      "max_videos": {
+        "type": "integer",
+        "description": "Maximum number of recent videos to retrieve (default 30).",
+        "default": 30
+      }
+    },
+    "required": ["channel_url"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "channel_stats": {
+        "type": "object",
+        "description": "Channel-level metadata (name, ID, URL, description)."
+      },
+      "videos": {
+        "type": "array",
+        "description": "List of video objects with title, views, likes, comments, duration, upload date."
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Jerry Green",
+      "tier": "PRISM Core",
+      "hours_used": 11.1,
+      "deliverable_status": "On Track",
+      "notes": "Music Video Strategy, Generation, Re-Prompting, New Song Creation"
+    },
+    {
+      "id": 2,
+      "name": "Jim Socci",
+      "tier": "PRISM Core",
+      "hours_used": 0.0,
+      "deliverable_status": "On Track",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "name": "Fronce Barnes",
+      "tier": "PRISM Scale",
+      "hours_used": 9.04,
+      "deliverable_status": "On Track",
+      "notes": "Music Video Completion, Storyboard, PRISM Implementation Call"
+    },
+    {
+      "id": 4,
+      "name": "Jessie Ifill",
+      "tier": "PRISM Core",
+      "hours_used": 9.18,
+      "deliverable_status": "On Track",
+      "notes": "YouTube Channel Creation, Song Editing, Video QA, Prompting & Generation"
+    },
+    {
+      "id": 5,
+      "name": "Will Brown",
+      "tier": "PRISM Activation",
+      "hours_used": 0.67,
+      "deliverable_status": "On Track",
+      "notes": "PRISM Implementation Call"
+    },
+    {
+      "id": 6,
+      "name": "Tom Kerchner",
+      "tier": "PRISM Scale",
+      "hours_used": 0.53,
+      "deliverable_status": "On Track",
+      "notes": "PRISM Implementation Call"
+    },
+    {
+      "id": 7,
+      "name": "Allan Babbit",
+      "tier": "PRISM Momentum Sprint",
+      "hours_used": 0.0,
+      "deliverable_status": "On Track",
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "name": "Trisha Robinson",
+      "tier": "PRISM Core",
+      "hours_used": 0.0,
+      "deliverable_status": "On Track",
+      "notes": ""
+    },
+    {
+      "id": 9,
+      "name": "Virginia Ellen",
+      "tier": "PRISM Core",
+      "hours_used": 0.0,
+      "deliverable_status": "On Track",
+      "notes": ""
+    },
+    {
+      "id": 10,
+      "name": "Jean Oursler",
+      "tier": "PRISM Core",
+      "hours_used": 0.0,
+      "deliverable_status": "On Track",
+      "notes": ""
+    },
+    {
+      "id": 11,
+      "name": "Phil Williams",
+      "tier": "PRISM Core",
+      "hours_used": 2.72,
+      "deliverable_status": "On Track",
+      "notes": "PRISM Implementation Tasks"
+    }
+  ]
+}

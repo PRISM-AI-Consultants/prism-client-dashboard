@@ -1,0 +1,19 @@
+# Runtime logs
+logs/
+
+# Environment secrets
+.env
+
+# Temporary files
+tmp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+{
+  "name": "analyze-trends",
+  "description": "Analyzes video performance data and identifies trends.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "channel_stats": {
+        "type": "object",
+        "description": "Channel-level statistics from scrape-youtube-data."
+      },
+      "videos": {
+        "type": "array",
+        "description": "List of video objects with performance metrics."
+      }
+    },
+    "required": ["videos"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "top_videos": {
+        "type": "array",
+        "description": "Top 5 videos ranked by views."
+      },
+      "growth_trend": {
+        "type": "object",
+        "description": "Overall channel growth metrics."
+      },
+      "engagement_summary": {
+        "type": "object",
+        "description": "Likes, comments, and engagement ratios."
+      }
+    }
+  }
+}

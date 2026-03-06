@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install -r requirements.txt)",
+      "Bash(where python)",
+      "Bash(where python3)",
+      "Bash(python -m pip install -r \"c:/Users/Joseph/Downloads/YouTube Analytics Folder/requirements.txt\")",
+      "Bash(py -c \"import yt_dlp; import fpdf; import dotenv; print\\(''All imports OK''\\)\")",
+      "Bash(npm install)",
+      "Bash(where node)",
+      "Bash(where npm)",
+      "Bash(echo \"PATH=$PATH\")",
+      "Bash(python tools/validate_scenarios.py)"
+    ]
+  }
+}

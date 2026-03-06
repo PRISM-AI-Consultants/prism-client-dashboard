@@ -1,0 +1,31 @@
+{
+  "name": "generate-pdf",
+  "description": "Generates a PDF report from analysis results.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "analysis": {
+        "type": "object",
+        "description": "The analysis results from analyze-trends."
+      },
+      "channel_stats": {
+        "type": "object",
+        "description": "Channel-level statistics for the report header."
+      },
+      "output_path": {
+        "type": "string",
+        "description": "File path for the generated PDF (defaults to tmp/)."
+      }
+    },
+    "required": ["analysis"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "report_path": {
+        "type": "string",
+        "description": "Absolute path to the generated PDF file."
+      }
+    }
+  }
+}
