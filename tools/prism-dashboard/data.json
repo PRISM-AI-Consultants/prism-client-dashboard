@@ -4,9 +4,9 @@
       "id": 1,
       "name": "Jerry Green",
       "tier": "PRISM Core",
-      "hours_used": 11.1,
+      "hours_used": 14.27,
       "deliverable_status": "On Track",
-      "notes": "Music Video Strategy, Generation, Re-Prompting, New Song Creation"
+      "notes": "Music Video Strategy, Generation, Re-Prompting, New Song Creation, MVP Game Completion"
     },
     {
       "id": 2,
@@ -20,17 +20,17 @@
       "id": 3,
       "name": "Fronce Barnes",
       "tier": "PRISM Scale",
-      "hours_used": 9.04,
+      "hours_used": 11.7,
       "deliverable_status": "On Track",
-      "notes": "Music Video Completion, Storyboard, PRISM Implementation Call"
+      "notes": "Music Video Completion, Storyboard, PRISM Implementation, Kearney Park Video Updates"
     },
     {
       "id": 4,
       "name": "Jessie Ifill",
       "tier": "PRISM Core",
-      "hours_used": 9.18,
+      "hours_used": 26.09,
       "deliverable_status": "On Track",
-      "notes": "YouTube Channel Creation, Song Editing, Video QA, Prompting & Generation"
+      "notes": "YouTube Channel Creation, Song Editing, Video QA, Music Video Completion - Your Love is Everywhere, Free to Be Me, Do You Know How to Love"
     },
     {
       "id": 5,
@@ -44,9 +44,9 @@
       "id": 6,
       "name": "Tom Kerchner",
       "tier": "PRISM Scale",
-      "hours_used": 0.53,
+      "hours_used": 1.23,
       "deliverable_status": "On Track",
-      "notes": "PRISM Implementation Call"
+      "notes": "PRISM Implementation Calls (Wks 9-10)"
     },
     {
       "id": 7,
@@ -68,17 +68,17 @@
       "id": 9,
       "name": "Virginia Ellen",
       "tier": "PRISM Core",
-      "hours_used": 0.0,
+      "hours_used": 5.03,
       "deliverable_status": "On Track",
-      "notes": ""
+      "notes": "Website Updates, HangOut for Art SEO, PRISM Implementation Calls, Virginia Ellen Audit"
     },
     {
       "id": 10,
       "name": "Jean Oursler",
       "tier": "PRISM Core",
-      "hours_used": 0.0,
+      "hours_used": 0.37,
       "deliverable_status": "On Track",
-      "notes": ""
+      "notes": "Image Editing and Creation"
     },
     {
       "id": 11,
@@ -87,6 +87,14 @@
       "hours_used": 2.72,
       "deliverable_status": "On Track",
       "notes": "PRISM Implementation Tasks"
+    },
+    {
+      "id": 12,
+      "name": "Jill Williams",
+      "tier": "PRISM Core",
+      "hours_used": 1.03,
+      "deliverable_status": "On Track",
+      "notes": "Song Editing (Wk 10)"
     }
   ]
 }
