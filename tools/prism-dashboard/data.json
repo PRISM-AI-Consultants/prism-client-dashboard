@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Jerry Green",
-      "tier": "PRISM Core",
+      "tier": "Legacy",
       "hours_used": 14.27,
       "deliverable_status": "On Track",
       "notes": "Music Video Strategy, Generation, Re-Prompting, New Song Creation, MVP Game Completion"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "Fronce Barnes",
-      "tier": "PRISM Scale",
+      "tier": "Legacy",
       "hours_used": 11.7,
       "deliverable_status": "On Track",
       "notes": "Music Video Completion, Storyboard, PRISM Implementation, Kearney Park Video Updates"
@@ -35,7 +35,7 @@
     {
       "id": 5,
       "name": "Will Brown",
-      "tier": "PRISM Activation",
+      "tier": "Legacy",
       "hours_used": 0.67,
       "deliverable_status": "On Track",
       "notes": "PRISM Implementation Call"
@@ -43,7 +43,7 @@
     {
       "id": 6,
       "name": "Tom Kerchner",
-      "tier": "PRISM Scale",
+      "tier": "Legacy",
       "hours_used": 1.23,
       "deliverable_status": "On Track",
       "notes": "PRISM Implementation Calls (Wks 9-10)"
@@ -51,26 +51,26 @@
     {
       "id": 7,
       "name": "Allan Babbit",
-      "tier": "PRISM Momentum Sprint",
+      "tier": "Legacy",
       "hours_used": 0.0,
       "deliverable_status": "On Track",
-      "notes": ""
+      "notes": "Legacy - re-upping to Core"
     },
     {
       "id": 8,
       "name": "Trisha Robinson",
-      "tier": "PRISM Core",
+      "tier": "PRISM Activation",
       "hours_used": 0.0,
       "deliverable_status": "On Track",
-      "notes": ""
+      "notes": "bhadra recover website"
     },
     {
       "id": 9,
       "name": "Virginia Ellen",
-      "tier": "PRISM Core",
+      "tier": "PRISM Activation",
       "hours_used": 5.03,
       "deliverable_status": "On Track",
-      "notes": "Website Updates, HangOut for Art SEO, PRISM Implementation Calls, Virginia Ellen Audit"
+      "notes": "HangOut for Art - Website SEO/AEO, PRISM Implementation Calls, Virginia Ellen Audit"
     },
     {
       "id": 10,
@@ -83,7 +83,7 @@
     {
       "id": 11,
       "name": "Phil Williams",
-      "tier": "PRISM Core",
+      "tier": "Legacy",
       "hours_used": 2.72,
       "deliverable_status": "On Track",
       "notes": "PRISM Implementation Tasks"
@@ -91,7 +91,7 @@
     {
       "id": 12,
       "name": "Jill Williams",
-      "tier": "PRISM Core",
+      "tier": "PRISM Activation",
       "hours_used": 1.03,
       "deliverable_status": "On Track",
       "notes": "Song Editing (Wk 10)"

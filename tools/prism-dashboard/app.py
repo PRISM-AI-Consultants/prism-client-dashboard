@@ -20,15 +20,16 @@ DATA_FILE = os.path.join(os.path.dirname(__file__), "data.json")
 
 TIER_CAPS: dict[str, float | None] = {
     "PRISM Core": 40.0,
-    "PRISM Scale": 80.0,
     "PRISM Activation": 10.0,
+    "Legacy": 10.0,
+    "PRISM Scale": 80.0,
     "PRISM Momentum Sprint": 60.0,
     "Hourly/Session": None,
 }
 
 TIERS = list(TIER_CAPS.keys())
 STATUSES = ["On Track", "At Risk", "Behind", "Complete"]
-TIER2 = {"PRISM Activation", "PRISM Momentum Sprint"}
+TIER2 = {"PRISM Activation", "PRISM Momentum Sprint", "Legacy"}
 ALERT_THRESHOLD = 80.0
 
 DEFAULT_CLIENTS = [
