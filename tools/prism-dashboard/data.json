@@ -1,76 +1,13 @@
 {
   "clients": [
     {
-      "id": 1,
-      "name": "Jerry Green",
-      "tier": "Legacy",
-      "hours_used": 14.27,
-      "deliverable_status": "On Track",
-      "notes": "Music Video Strategy, Generation, Re-Prompting, New Song Creation, MVP Game Completion"
-    },
-    {
       "id": 2,
       "name": "Jim Socci",
       "tier": "PRISM Core",
       "hours_used": 0.0,
       "deliverable_status": "On Track",
-      "notes": ""
-    },
-    {
-      "id": 3,
-      "name": "Fronce Barnes",
-      "tier": "Legacy",
-      "hours_used": 11.7,
-      "deliverable_status": "On Track",
-      "notes": "Music Video Completion, Storyboard, PRISM Implementation, Kearney Park Video Updates"
-    },
-    {
-      "id": 4,
-      "name": "Jessie Ifill",
-      "tier": "PRISM Core",
-      "hours_used": 26.09,
-      "deliverable_status": "On Track",
-      "notes": "YouTube Channel Creation, Song Editing, Video QA, Music Video Completion - Your Love is Everywhere, Free to Be Me, Do You Know How to Love"
-    },
-    {
-      "id": 5,
-      "name": "Will Brown",
-      "tier": "Legacy",
-      "hours_used": 0.67,
-      "deliverable_status": "On Track",
-      "notes": "PRISM Implementation Call"
-    },
-    {
-      "id": 6,
-      "name": "Tom Kerchner",
-      "tier": "Legacy",
-      "hours_used": 1.23,
-      "deliverable_status": "On Track",
-      "notes": "PRISM Implementation Calls (Wks 9-10)"
-    },
-    {
-      "id": 7,
-      "name": "Allan Babbit",
-      "tier": "Legacy",
-      "hours_used": 0.0,
-      "deliverable_status": "On Track",
-      "notes": "Legacy - re-upping to Core"
-    },
-    {
-      "id": 8,
-      "name": "Trisha Robinson",
-      "tier": "PRISM Activation",
-      "hours_used": 0.0,
-      "deliverable_status": "On Track",
-      "notes": "bhadra recover website"
-    },
-    {
-      "id": 9,
-      "name": "Virginia Ellen",
-      "tier": "PRISM Activation",
-      "hours_used": 5.03,
-      "deliverable_status": "On Track",
-      "notes": "HangOut for Art - Website SEO/AEO, PRISM Implementation Calls, Virginia Ellen Audit"
+      "notes": "",
+      "deliverables": []
     },
     {
       "id": 10,
@@ -78,15 +15,56 @@
       "tier": "PRISM Core",
       "hours_used": 0.37,
       "deliverable_status": "On Track",
-      "notes": "Image Editing and Creation"
+      "notes": "Image Editing and Creation",
+      "deliverables": [
+        {"name": "Image Editing and Creation", "owner": "", "status": "In Progress", "target_date": ""}
+      ]
     },
     {
-      "id": 11,
-      "name": "Phil Williams",
-      "tier": "Legacy",
-      "hours_used": 2.72,
+      "id": 4,
+      "name": "Jessie Ifill",
+      "tier": "PRISM Core",
+      "hours_used": 26.09,
       "deliverable_status": "On Track",
-      "notes": "PRISM Implementation Tasks"
+      "notes": "YouTube Channel Creation, Song Editing, Video QA, Music Video Completion - Your Love is Everywhere, Free to Be Me, Do You Know How to Love",
+      "deliverables": [
+        {"name": "YouTube Channel Creation", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Storyboard & Video Prompts", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Music Video - Your Love is Everywhere", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Music Video - Free to Be Me", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Music Video - Do You Know How to Love", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Song Editing & Video QA", "owner": "", "status": "Done", "target_date": ""}
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Virginia Ellen",
+      "tier": "PRISM Activation",
+      "hours_used": 5.03,
+      "deliverable_status": "On Track",
+      "notes": "HangOut for Art - Website SEO/AEO, PRISM Implementation Calls, Virginia Ellen Audit",
+      "deliverables": [
+        {"name": "Digital Presence Audit", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Website SEO / AEO Fixes", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-28"},
+        {"name": "Strategy Session 1", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Strategy Session 2", "owner": "", "status": "Not Started", "target_date": ""},
+        {"name": "Strategy Session 3", "owner": "", "status": "Not Started", "target_date": ""},
+        {"name": "Light Automation Setup (Transcription Drive)", "owner": "", "status": "Not Started", "target_date": ""}
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Trisha Robinson",
+      "tier": "PRISM Activation",
+      "hours_used": 0.0,
+      "deliverable_status": "On Track",
+      "notes": "BHADRA Recovery Website",
+      "deliverables": [
+        {"name": "BHADRA Recovery Website Build", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"},
+        {"name": "GHL Form Embed + CTA Button", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"},
+        {"name": "HIPAA Page", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"},
+        {"name": "Privacy Policy Page", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"}
+      ]
     },
     {
       "id": 12,
@@ -94,7 +72,80 @@
       "tier": "PRISM Activation",
       "hours_used": 1.03,
       "deliverable_status": "On Track",
-      "notes": "Song Editing (Wk 10)"
+      "notes": "Song Editing (Wk 10)",
+      "deliverables": [
+        {"name": "Song Editing", "owner": "", "status": "In Progress", "target_date": ""}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Jerry Green",
+      "tier": "Legacy",
+      "hours_used": 14.27,
+      "deliverable_status": "On Track",
+      "notes": "Music Video Strategy, Generation, Re-Prompting, New Song Creation, MVP Game Completion",
+      "deliverables": [
+        {"name": "Music Video - Safety Over Silence", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "New Song Creation (Multi-AI)", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "MVP Game Completion", "owner": "", "status": "In Progress", "target_date": ""}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Fronce Barnes",
+      "tier": "Legacy",
+      "hours_used": 11.7,
+      "deliverable_status": "On Track",
+      "notes": "Music Video Completion, Storyboard, PRISM Implementation, Kearney Park Video Updates",
+      "deliverables": [
+        {"name": "Music Video Completion", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "Kearney Park Video Updates", "owner": "", "status": "In Progress", "target_date": ""},
+        {"name": "New Storyboard & Prompting", "owner": "", "status": "Done", "target_date": ""},
+        {"name": "PRISM Implementation Call", "owner": "", "status": "Done", "target_date": ""}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Will Brown",
+      "tier": "Legacy",
+      "hours_used": 0.67,
+      "deliverable_status": "On Track",
+      "notes": "PRISM Implementation Call",
+      "deliverables": [
+        {"name": "PRISM Implementation Call", "owner": "", "status": "Done", "target_date": ""}
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Tom Kerchner",
+      "tier": "Legacy",
+      "hours_used": 1.23,
+      "deliverable_status": "On Track",
+      "notes": "PRISM Implementation Calls (Wks 9-10)",
+      "deliverables": [
+        {"name": "PRISM Implementation Calls (Wks 9-10)", "owner": "", "status": "In Progress", "target_date": ""},
+        {"name": "BMI Analyzer Tool", "owner": "", "status": "Done", "target_date": ""}
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Allan Babbit",
+      "tier": "Legacy",
+      "hours_used": 0.0,
+      "deliverable_status": "On Track",
+      "notes": "Legacy - re-upping to Core",
+      "deliverables": []
+    },
+    {
+      "id": 11,
+      "name": "Phil Williams",
+      "tier": "Legacy",
+      "hours_used": 2.72,
+      "deliverable_status": "On Track",
+      "notes": "PRISM Implementation Tasks",
+      "deliverables": [
+        {"name": "PRISM Implementation Tasks", "owner": "", "status": "In Progress", "target_date": ""}
+      ]
     }
   ]
 }

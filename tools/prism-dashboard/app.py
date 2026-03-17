@@ -32,6 +32,16 @@ STATUSES = ["On Track", "At Risk", "Behind", "Complete"]
 TIER2 = {"PRISM Activation", "PRISM Momentum Sprint", "Legacy"}
 ALERT_THRESHOLD = 80.0
 
+TIER_PRIORITY = {
+    "PRISM Core": 1,
+    "PRISM Scale": 2,
+    "PRISM Activation": 3,
+    "PRISM Momentum Sprint": 4,
+    "Legacy": 5,
+    "Hourly/Session": 6,
+}
+DELIVERABLE_STATUSES = ["In Progress", "Not Started", "Blocked", "Done"]
+
 DEFAULT_CLIENTS = [
     {"id": 1,  "name": "Jerry Green",      "tier": "PRISM Core",            "hours_used": 0.0, "deliverable_status": "On Track", "notes": ""},
     {"id": 2,  "name": "Jim Socci",        "tier": "PRISM Core",            "hours_used": 0.0, "deliverable_status": "On Track", "notes": ""},
@@ -95,6 +105,42 @@ def compute_df(clients: list[dict]) -> pd.DataFrame:
             "Notes": c.get("notes", ""),
         })
     return pd.DataFrame(rows)
+
+
+def compute_deliverables_df(clients: list[dict]) -> pd.DataFrame:
+    rows = []
+    for c in clients:
+        tier = c.get("tier", "PRISM Core")
+        priority = TIER_PRIORITY.get(tier, 99)
+        for i, d in enumerate(c.get("deliverables", [])):
+            rows.append({
+                "_client_id": c["id"],
+                "_del_idx": i,
+                "_priority": priority,
+                "Client": c["name"],
+                "Tier": tier,
+                "Deliverable": d.get("name", ""),
+                "Owner": d.get("owner", ""),
+                "Status": d.get("status", "Not Started"),
+                "Target Date": d.get("target_date", ""),
+            })
+    result = pd.DataFrame(rows)
+    if not result.empty:
+        result = result.sort_values(["_priority", "Client"]).reset_index(drop=True)
+    return result
+
+
+def style_deliverable_row(row: pd.Series) -> list[str]:
+    status = row["Status"]
+    if status == "Done":
+        color = C["row_green"]
+    elif status == "Blocked":
+        color = C["row_red"]
+    elif status == "In Progress":
+        color = C["row_yellow"]
+    else:
+        color = ""
+    return [color] * len(row)
 
 
 def style_row(row: pd.Series) -> list[str]:
@@ -385,3 +431,102 @@ styled = summary_df.style.apply(style_row, axis=1).format(
     na_rep="N/A",
 )
 st.dataframe(styled, use_container_width=True, hide_index=True)
+
+# ---------------------------------------------------------------------------
+# Deliverables Tracker
+# ---------------------------------------------------------------------------
+
+st.divider()
+st.subheader("Deliverables Tracker")
+st.caption("Sorted by priority: Core → Activation → Legacy. Edit inline and click **Save Deliverables** to persist.")
+
+del_df = compute_deliverables_df(clients)
+
+if del_df.empty:
+    st.info("No deliverables logged yet. Add one below.")
+    display_del_df = pd.DataFrame(columns=["Client", "Tier", "Deliverable", "Owner", "Status", "Target Date"])
+else:
+    display_del_df = del_df[["Client", "Tier", "Deliverable", "Owner", "Status", "Target Date"]].copy()
+
+edited_del = st.data_editor(
+    display_del_df,
+    use_container_width=True,
+    num_rows="fixed",
+    hide_index=True,
+    key="del_editor",
+    column_config={
+        "Client":      st.column_config.TextColumn("Client", disabled=True, width="medium"),
+        "Tier":        st.column_config.TextColumn("Tier", disabled=True, width="medium"),
+        "Deliverable": st.column_config.TextColumn("Deliverable", width="large"),
+        "Owner":       st.column_config.TextColumn("Owner", width="small"),
+        "Status":      st.column_config.SelectboxColumn("Status", options=DELIVERABLE_STATUSES, required=True, width="small"),
+        "Target Date": st.column_config.TextColumn("Target Date", width="small", help="e.g. 2026-03-28"),
+    },
+)
+
+col_del_save, _ = st.columns([1, 7])
+with col_del_save:
+    if st.button("Save Deliverables", type="primary", use_container_width=True):
+        if not del_df.empty:
+            for idx, edit_row in edited_del.iterrows():
+                if idx < len(del_df):
+                    client_id = int(del_df.iloc[idx]["_client_id"])
+                    del_idx   = int(del_df.iloc[idx]["_del_idx"])
+                    for c in clients:
+                        if c["id"] == client_id:
+                            c["deliverables"][del_idx]["name"]        = edit_row["Deliverable"]
+                            c["deliverables"][del_idx]["owner"]       = edit_row["Owner"]
+                            c["deliverables"][del_idx]["status"]      = edit_row["Status"]
+                            c["deliverables"][del_idx]["target_date"] = edit_row["Target Date"]
+                            break
+        save_data(clients)
+        st.success("Deliverables saved.")
+        st.rerun()
+
+# Add Deliverable form
+st.markdown("**Add Deliverable**")
+with st.form("add_deliverable_form", clear_on_submit=True):
+    client_names = [c["name"] for c in clients]
+    col_d1, col_d2, col_d3 = st.columns(3)
+    with col_d1:
+        del_client = st.selectbox("Client *", options=client_names)
+    with col_d2:
+        del_name = st.text_input("Deliverable Name *", placeholder="e.g. Website Redesign")
+    with col_d3:
+        del_owner = st.text_input("Owner", placeholder="e.g. Jhomark")
+
+    col_d4, col_d5 = st.columns(2)
+    with col_d4:
+        del_status = st.selectbox("Status", options=DELIVERABLE_STATUSES)
+    with col_d5:
+        del_date = st.text_input("Target Date", placeholder="e.g. 2026-03-28")
+
+    del_submitted = st.form_submit_button("Add Deliverable", type="primary", use_container_width=True)
+    if del_submitted:
+        if not del_name.strip():
+            st.error("Deliverable Name is required.")
+        else:
+            for c in clients:
+                if c["name"] == del_client:
+                    if "deliverables" not in c:
+                        c["deliverables"] = []
+                    c["deliverables"].append({
+                        "name":        del_name.strip(),
+                        "owner":       del_owner.strip(),
+                        "status":      del_status,
+                        "target_date": del_date.strip(),
+                    })
+                    break
+            save_data(clients)
+            st.success(f'Deliverable "{del_name.strip()}" added for {del_client}.')
+            st.rerun()
+
+# Color-coded deliverables overview
+st.divider()
+st.subheader("Deliverables Status Overview")
+st.caption("🟢 Done  🟡 In Progress  🔴 Blocked  ⬜ Not Started")
+
+if not del_df.empty:
+    overview_df = del_df[["Client", "Tier", "Deliverable", "Owner", "Status", "Target Date"]].copy()
+    styled_del  = overview_df.style.apply(style_deliverable_row, axis=1)
+    st.dataframe(styled_del, use_container_width=True, hide_index=True)
