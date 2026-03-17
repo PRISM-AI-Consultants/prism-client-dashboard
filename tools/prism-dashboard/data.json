@@ -7,7 +7,10 @@
       "hours_used": 0.0,
       "deliverable_status": "On Track",
       "notes": "",
-      "deliverables": []
+      "deliverables": [
+        {"name": "Email Triage Agent Build", "owner": "James", "status": "In Progress", "target_date": ""},
+        {"name": "Otter Automation Setup", "owner": "James", "status": "In Progress", "target_date": ""}
+      ]
     },
     {
       "id": 10,
@@ -42,10 +45,13 @@
       "tier": "PRISM Activation",
       "hours_used": 5.03,
       "deliverable_status": "On Track",
-      "notes": "HangOut for Art - Website SEO/AEO, PRISM Implementation Calls, Virginia Ellen Audit",
+      "notes": "HangOut for Art — Website Audit Complete (Mar 11). 26 action items identified. 8 missing services, pricing visibility, indexation fixes.",
       "deliverables": [
-        {"name": "Digital Presence Audit", "owner": "", "status": "Done", "target_date": ""},
-        {"name": "Website SEO / AEO Fixes", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-28"},
+        {"name": "Digital Presence Audit (19 pages, 26 action items)", "owner": "James", "status": "Done", "target_date": "2026-03-11"},
+        {"name": "Add pricing to 15 missing experience pages", "owner": "Jhomark", "status": "In Progress", "target_date": ""},
+        {"name": "Add 8 missing services (charcuterie, chocolate crafting, soap making, etc.)", "owner": "Jhomark", "status": "Not Started", "target_date": ""},
+        {"name": "Fix Google indexation (5/19 pages indexed)", "owner": "Jhomark", "status": "Not Started", "target_date": ""},
+        {"name": "Add schema markup (AEO)", "owner": "Jhomark", "status": "Not Started", "target_date": ""},
         {"name": "Strategy Session 1", "owner": "", "status": "Done", "target_date": ""},
         {"name": "Strategy Session 2", "owner": "", "status": "Not Started", "target_date": ""},
         {"name": "Strategy Session 3", "owner": "", "status": "Not Started", "target_date": ""},
@@ -58,12 +64,13 @@
       "tier": "PRISM Activation",
       "hours_used": 0.0,
       "deliverable_status": "On Track",
-      "notes": "BHADRA Recovery Website",
+      "notes": "BHADRA Recovery — Priorities 1-4 completed by Jhomark on Mar 14 (Loom recorded). Priority 5 pending.",
       "deliverables": [
-        {"name": "BHADRA Recovery Website Build", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"},
-        {"name": "GHL Form Embed + CTA Button", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"},
-        {"name": "HIPAA Page", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"},
-        {"name": "Privacy Policy Page", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"}
+        {"name": "P1: Confidential Assessment Form (GHL + WordPress)", "owner": "Jhomark", "status": "Done", "target_date": "2026-03-14"},
+        {"name": "P2: HIPAA Compliance — Privacy Policy + Notice of Privacy Practices pages", "owner": "Jhomark", "status": "Done", "target_date": "2026-03-14"},
+        {"name": "P3: Provider Credentials — Dr. Tricia Robinson, Psy.D., ABPP on About page", "owner": "Jhomark", "status": "Done", "target_date": "2026-03-14"},
+        {"name": "P4: Mental Health Content — co-occurring, trauma, anxiety, family therapy", "owner": "Jhomark", "status": "Done", "target_date": "2026-03-14"},
+        {"name": "P5: Technical Audit (plugins, SSL, backup, form builder)", "owner": "Jhomark", "status": "Not Started", "target_date": ""}
       ]
     },
     {
@@ -72,9 +79,20 @@
       "tier": "PRISM Activation",
       "hours_used": 1.03,
       "deliverable_status": "On Track",
-      "notes": "Song Editing (Wk 10)",
+      "notes": "911 Campus Notify — Website implementation on Wix. Assigned to Jhomark Mar 16. Song + video in production.",
       "deliverables": [
-        {"name": "Song Editing", "owner": "", "status": "In Progress", "target_date": ""}
+        {"name": "Verify Wix + Domain.com + Google Analytics access", "owner": "Jhomark", "status": "In Progress", "target_date": "2026-03-18"},
+        {"name": "Full site audit (pages, content, forms, mobile, speed, SEO)", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-18"},
+        {"name": "Lead capture — contact form routing to Jill's email", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-21"},
+        {"name": "Add booking/scheduling mechanism (Calendly or form)", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-21"},
+        {"name": "Reframe messaging: facilities/security → liability/risk", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-21"},
+        {"name": "Create free risk assessment offer section", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-21"},
+        {"name": "Align copy for private school admins + board members", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-21"},
+        {"name": "Full mobile responsiveness check", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-21"},
+        {"name": "Professional design polish", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-24"},
+        {"name": "Placeholder section for song/video content (in production)", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-24"},
+        {"name": "Verify LinkedIn profile linked from site", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-24"},
+        {"name": "SEO — school safety consulting, campus security, risk assessment keywords", "owner": "Jhomark", "status": "Not Started", "target_date": "2026-03-24"}
       ]
     },
     {
@@ -83,11 +101,13 @@
       "tier": "Legacy",
       "hours_used": 14.27,
       "deliverable_status": "On Track",
-      "notes": "Music Video Strategy, Generation, Re-Prompting, New Song Creation, MVP Game Completion",
+      "notes": "Over Legacy cap. Music Video + New Song done. MVP Game in progress — positioned as Core conversion bridge.",
       "deliverables": [
         {"name": "Music Video - Safety Over Silence", "owner": "", "status": "Done", "target_date": ""},
         {"name": "New Song Creation (Multi-AI)", "owner": "", "status": "Done", "target_date": ""},
-        {"name": "MVP Game Completion", "owner": "", "status": "In Progress", "target_date": ""}
+        {"name": "MVP Game Completion", "owner": "", "status": "In Progress", "target_date": ""},
+        {"name": "Promotional Video Distribution", "owner": "James", "status": "In Progress", "target_date": ""},
+        {"name": "Podcast Workflow Coordination", "owner": "James", "status": "Not Started", "target_date": ""}
       ]
     },
     {
